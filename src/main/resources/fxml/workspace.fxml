@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
+      alignment="TOP_LEFT" spacing="16" styleClass="my-vbox" fx:controller="ru.evp.JXporter.controllers.WorkSpaceController" >
+
+    <Label text="Рабочая область" styleClass="label-large"/>
+
+   	<VBox alignment="TOP_LEFT" spacing="4" styleClass="vbox_container">
+	    <HBox alignment="TOP_LEFT" spacing="10">
+    		<Label text="Файлы заемщика №1" styleClass="label-title"/>
+	    </HBox>
+	    <HBox alignment="TOP_LEFT" spacing="10">
+		    <TextField fx:id="sspFileField1"
+		               promptText="ССП"
+		               editable="false"
+		               focusTraversable="true"
+		               prefColumnCount="30"
+		               minWidth="200"
+		               maxWidth="800"
+		               HBox.hgrow="ALWAYS"
+		               alignment="CENTER_LEFT"/>
+	        <Button text="..." onAction="#btnSelectSspFile1" styleClass="primary" prefWidth="20" prefHeight="20">
+			    <tooltip>
+			        <Tooltip text="Выбор XML файла ССП для первого заемщика"/>
+			    </tooltip>
+			</Button>
+	    </HBox>
+	    <HBox alignment="TOP_LEFT" spacing="10">
+		    <TextField fx:id="nbkiFileField1"
+		               promptText="НБКИ"
+		               editable="false"
+		               focusTraversable="true"
+		               prefColumnCount="30"
+		               minWidth="200"
+		               maxWidth="800"
+		               HBox.hgrow="ALWAYS"
+		               alignment="CENTER_LEFT"/>
+	        <Button text="..." onAction="#btnSelectNbkiFile1" styleClass="primary" prefWidth="20" prefHeight="20">
+			    <tooltip>
+			        <Tooltip text="Выбор XML файла НБКИ для первого заемщика"/>
+			    </tooltip>
+			</Button>
+	    </HBox>
+    </VBox>
+   	<VBox alignment="TOP_LEFT" spacing="4" styleClass="vbox_container">
+	    <HBox alignment="TOP_LEFT" spacing="10">
+    		<Label text="Файлы заемщика №2" styleClass="label-title"/>
+	    </HBox>
+	    <HBox alignment="TOP_LEFT" spacing="10">
+		    <TextField fx:id="sspFileField2"
+		               promptText="ССП"
+		               editable="false"
+		               focusTraversable="true"
+		               prefColumnCount="30"
+		               minWidth="200"
+		               maxWidth="800"
+		               HBox.hgrow="ALWAYS"
+		               alignment="CENTER_LEFT"/>
+	        <Button text="..." onAction="#btnSelectSspFile2" styleClass="primary" prefWidth="20" prefHeight="20">
+			    <tooltip>
+			        <Tooltip text="Выбор XML файла ССП для второго заемщика"/>
+			    </tooltip>
+			</Button>
+	    </HBox>
+	    <HBox alignment="TOP_LEFT" spacing="10">
+		    <TextField fx:id="nbkiFileField2"
+		               promptText="НБКИ"
+		               editable="false"
+		               focusTraversable="true"
+		               prefColumnCount="30"
+		               minWidth="200"
+		               maxWidth="800"
+		               HBox.hgrow="ALWAYS"
+		               alignment="CENTER_LEFT"/>
+	        <Button text="..." onAction="#btnSelectNbkiFile2" styleClass="primary" prefWidth="20" prefHeight="20">
+			    <tooltip>
+			        <Tooltip text="Выбор XML файла НБКИ для второго заемщика"/>
+			    </tooltip>
+			</Button>
+	    </HBox>
+    </VBox>
+   	<VBox alignment="TOP_LEFT" spacing="4" styleClass="vbox_container">
+	    <HBox alignment="TOP_LEFT" spacing="10">
+    		<Label text="Файлы заемщика №3" styleClass="label-title"/>
+	    </HBox>
+	    <HBox alignment="TOP_LEFT" spacing="10">
+		    <TextField fx:id="sspFileField3"
+		               promptText="ССП"
+		               editable="false"
+		               focusTraversable="true"
+		               prefColumnCount="30"
+		               minWidth="200"
+		               maxWidth="800"
+		               HBox.hgrow="ALWAYS"
+		               alignment="CENTER_LEFT"/>
+	        <Button text="..." onAction="#btnSelectSspFile3" styleClass="primary" prefWidth="20" prefHeight="20">
+			    <tooltip>
+			        <Tooltip text="Выбор XML файла ССП для третьего заемщика"/>
+			    </tooltip>
+			</Button>
+	    </HBox>
+	    <HBox alignment="TOP_LEFT" spacing="10">
+		    <TextField fx:id="nbkiFileField3"
+		               promptText="НБКИ"
+		               editable="false"
+		               focusTraversable="true"
+		               prefColumnCount="30"
+		               minWidth="200"
+		               maxWidth="800"
+		               HBox.hgrow="ALWAYS"
+		               alignment="CENTER_LEFT"/>
+	        <Button text="..." onAction="#btnSelectNbkiFile3" styleClass="primary" prefWidth="20" prefHeight="20">
+			    <tooltip>
+			        <Tooltip text="Выбор XML файла НБКИ для третьего заемщика"/>
+			    </tooltip>
+			</Button>
+	    </HBox>
+    </VBox>
+   	<VBox alignment="TOP_LEFT" spacing="4" styleClass="vbox_container">
+	    <HBox alignment="TOP_LEFT" spacing="10">
+    		<Label text="Файлы заемщика №4" styleClass="label-title"/>
+	    </HBox>
+	    <HBox alignment="TOP_LEFT" spacing="10">
+		    <TextField fx:id="sspFileField4"
+		               promptText="ССП"
+		               editable="false"
+		               focusTraversable="true"
+		               prefColumnCount="30"
+		               minWidth="200"
+		               maxWidth="800"
+		               HBox.hgrow="ALWAYS"
+		               alignment="CENTER_LEFT"/>
+	        <Button text="..." onAction="#btnSelectSspFile4" styleClass="primary" prefWidth="20" prefHeight="20">
+			    <tooltip>
+			        <Tooltip text="Выбор XML файла ССП для четвертого заемщика"/>
+			    </tooltip>
+			</Button>
+	    </HBox>
+	    <HBox alignment="TOP_LEFT" spacing="10">
+		    <TextField fx:id="nbkiFileField4"
+		               promptText="НБКИ"
+		               editable="false"
+		               focusTraversable="true"
+		               prefColumnCount="30"
+		               minWidth="200"
+		               maxWidth="800"
+		               HBox.hgrow="ALWAYS"
+		               alignment="CENTER_LEFT"/>
+	        <Button text="..." onAction="#btnSelectNbkiFile4" styleClass="primary" prefWidth="20" prefHeight="20">
+			    <tooltip>
+			        <Tooltip text="Выбор XML файла НБКИ для четвертого заемщика"/>
+			    </tooltip>
+			</Button>
+	    </HBox>
+    </VBox>
+	<Button text="Создать отчет" onAction="#btnCreateReport" styleClass="primary" prefWidth="200" prefHeight="20">
+	    <tooltip>
+	        <Tooltip text="Выбор XML файла"/>
+	    </tooltip>
+	</Button>
+</VBox>

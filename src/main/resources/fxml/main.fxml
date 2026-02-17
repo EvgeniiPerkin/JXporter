@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" styleClass="root" fx:controller="ru.evp.JXporter.controllers.MainController">
+    <top>
+        <MenuBar>
+            <Menu text="Файл">
+                <MenuItem onAction="#loadWorkspace" text="Рабочее пространство"/>
+                <MenuItem   text="Настройки"/>
+                <MenuItem   text="Отчёты"/>
+                <SeparatorMenuItem/>
+                <MenuItem   text="О программе"/>
+                <SeparatorMenuItem/>
+                <MenuItem   text="Выход"/>
+            </Menu>
+
+            <Menu text="Справка">
+                <MenuItem text="Помощь"/>
+                <MenuItem text="Проверить обновления"/>
+            </Menu>
+        </MenuBar>
+    </top>
+    <center>
+        <StackPane fx:id="contentArea">
+			<fx:include source="workspace.fxml"/>
+        </StackPane>
+    </center>
+</BorderPane>

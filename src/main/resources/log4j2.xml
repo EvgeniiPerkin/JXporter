@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+
+    <Properties>
+        <!-- Шаблон форматирования -->
+        <Property name="pattern">
+            %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level [user=%X{username}] %logger{36} - %msg%n
+        </Property>
+    </Properties>
+
+    <Appenders>
+
+        <!-- Логирование в консоль -->
+        <Console name="ConsoleAppender" target="SYSTEM_OUT">
+            <PatternLayout pattern="${pattern}"/>
+        </Console>
+
+        <!-- Логирование в файл -->
+        <RollingFile name="FileAppender"
+                     fileName="${sys:app.logs.dir}/app.log"
+             		 filePattern="${sys:app.logs.dir}/app-%d{yyyy}.log.gz">
+            <PatternLayout pattern="${pattern}"/>
+
+            <Policies>
+                <!-- Новый файл каждый день -->
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+                <!-- И при превышении 10MB -->
+                <SizeBasedTriggeringPolicy size="50 MB"/>
+            </Policies>
+
+            <!-- Хранить максимум 5 архивов -->
+            <DefaultRolloverStrategy max="5"/>
+        </RollingFile>
+
+    </Appenders>
+
+    <Loggers>
+
+        <!-- Логирование для конкретного пакета -->
+        <Logger name="ru.evp.JXporter" level="debug" additivity="false">
+            <AppenderRef ref="ConsoleAppender"/>
+            <AppenderRef ref="FileAppender"/>
+        </Logger>
+
+        <!-- Корневой логгер -->
+        <Root level="info">
+            <AppenderRef ref="ConsoleAppender"/>
+            <AppenderRef ref="FileAppender"/>
+        </Root>
+
+    </Loggers>
+
+</Configuration>
