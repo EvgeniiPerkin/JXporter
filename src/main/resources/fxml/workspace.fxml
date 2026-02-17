@@ -4,6 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+
 <VBox xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
       alignment="TOP_LEFT" spacing="16" styleClass="my-vbox" fx:controller="ru.evp.JXporter.controllers.WorkSpaceController" >
 
