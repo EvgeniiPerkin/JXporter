@@ -245,7 +245,7 @@ public class CreditPaymentReportServiceImpl implements CreditPaymentReportServic
 		if (c == null) {
 			c = r.createCell(columnNumber);
 		}
-		c.setCellValue(value.doubleValue());
+		c.setCellValue(value == null ? 0.0: value.doubleValue());
 		c.setCellStyle(numberStyle);
 	}
 	

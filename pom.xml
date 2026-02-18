@@ -1,105 +1,110 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>ru.evp</groupId>
+	<artifactId>JXporter</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 
-  <groupId>ru.evp</groupId>
-  <artifactId>JXporter</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
+	<name>JXporter</name>
+	<url>http://maven.apache.org</url>
 
-  <name>JXporter</name>
-  <url>http://maven.apache.org</url>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	<project.jdk.version>25.0.2</project.jdk.version>
-	<java.version>25</java.version>
-	<javafx.version>25.0.2</javafx.version>
-	<mvn-compiler.version>3.14.1</mvn-compiler.version>
-	<maven.compiler.version>3.13.0</maven.compiler.version>
-	<maven.assembly.version>3.7.1</maven.assembly.version>
-	<org.apache.poi.version>5.5.1</org.apache.poi.version>
-	<org.apache.logging.log4j.version>2.22.1</org.apache.logging.log4j.version>
-	<com.fasterxml.jackson.core.version>2.21.0</com.fasterxml.jackson.core.version>
-  </properties>
-
-  <dependencies>
-    <dependency>
-        <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter</artifactId>
-        <version>5.10.1</version>
-        <scope>test</scope>
-    </dependency>
-    <dependency>
-	    <groupId>org.mockito</groupId>
-	    <artifactId>mockito-core</artifactId>
-	    <version>3.2.4</version>
-	    <scope>test</scope>
-	</dependency>
-
-	<!-- JavaFX -->
-	<dependency>
-		<groupId>org.openjfx</groupId>
-		<artifactId>javafx-base</artifactId>
-		<version>${javafx.version}</version>
-	</dependency>
+	<developers>
+		<developer>
+			<name>Evgenii Perkin</name>
+			<email>evgeniiperkin@bk.ru</email>
+			<timezone>+3</timezone>
+		</developer>
+	</developers>
 	
-	<dependency>
-		<groupId>org.openjfx</groupId>
-		<artifactId>javafx-graphics</artifactId>
-		<version>${javafx.version}</version>
-	</dependency>
-	
-	<dependency>
-		<groupId>org.openjfx</groupId>
-		<artifactId>javafx-controls</artifactId>
-		<version>${javafx.version}</version>
-	</dependency>
-	
-	<dependency>
-		<groupId>org.openjfx</groupId>
-		<artifactId>javafx-fxml</artifactId>
-		<version>${javafx.version}</version>
-	</dependency>
-	<!-- Source: https://mvnrepository.com/artifact/org.apache.poi/poi -->
-    <dependency>
-        <groupId>org.apache.poi</groupId>
-        <artifactId>poi-ooxml</artifactId>
-        <version>${org.apache.poi.version}</version>
-    </dependency>
-	<dependency>
-	    <groupId>org.apache.poi</groupId>
-	    <artifactId>poi</artifactId>
-	    <version>${org.apache.poi.version}</version>
-	    <scope>compile</scope>
-	</dependency>
-	
-    <!-- Log4j API -->
-    <dependency>
-        <groupId>org.apache.logging.log4j</groupId>
-        <artifactId>log4j-api</artifactId>
-        <version>${org.apache.logging.log4j.version}</version>
-    </dependency>
-    <!-- Log4j Core (REQUIRED) -->
-    <dependency>
-        <groupId>org.apache.logging.log4j</groupId>
-        <artifactId>log4j-core</artifactId>
-        <version>${org.apache.logging.log4j.version}</version>
-    </dependency>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.jdk.version>25.0.2</project.jdk.version>
+		<java.version>25</java.version>
+		<javafx.version>25.0.2</javafx.version>
+		<mvn-compiler.version>3.14.1</mvn-compiler.version>
+		<maven.compiler.version>3.13.0</maven.compiler.version>
+		<maven.assembly.version>3.7.1</maven.assembly.version>
+		<org.apache.poi.version>5.5.1</org.apache.poi.version>
+		<org.apache.logging.log4j.version>2.22.1</org.apache.logging.log4j.version>
+		<com.fasterxml.jackson.core.version>2.21.0</com.fasterxml.jackson.core.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+        	<groupId>org.junit.jupiter</groupId>
+	        <artifactId>junit-jupiter</artifactId>
+	        <version>5.10.1</version>
+	        <scope>test</scope>
+    	</dependency>
+	    <dependency>
+		    <groupId>org.mockito</groupId>
+		    <artifactId>mockito-core</artifactId>
+		    <version>3.2.4</version>
+		    <scope>test</scope>
+		</dependency>
+
+		<!-- JavaFX -->
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-base</artifactId>
+			<version>${javafx.version}</version>
+		</dependency>		
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-graphics</artifactId>
+			<version>${javafx.version}</version>
+		</dependency>		
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-controls</artifactId>
+			<version>${javafx.version}</version>
+		</dependency>		
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-fxml</artifactId>
+			<version>${javafx.version}</version>
+		</dependency>
+		
+		<!-- Source: https://mvnrepository.com/artifact/org.apache.poi/poi -->
+	    <dependency>
+	        <groupId>org.apache.poi</groupId>
+	        <artifactId>poi-ooxml</artifactId>
+	        <version>${org.apache.poi.version}</version>
+	    </dependency>
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi</artifactId>
+		    <version>${org.apache.poi.version}</version>
+		    <scope>compile</scope>
+		</dependency>
+		
+	    <!-- Log4j API -->
+	    <dependency>
+	        <groupId>org.apache.logging.log4j</groupId>
+	        <artifactId>log4j-api</artifactId>
+	        <version>${org.apache.logging.log4j.version}</version>
+	    </dependency>
+	    <!-- Log4j Core (REQUIRED) -->
+	    <dependency>
+	        <groupId>org.apache.logging.log4j</groupId>
+	        <artifactId>log4j-core</artifactId>
+	        <version>${org.apache.logging.log4j.version}</version>
+	    </dependency>
     
-    <!-- Source: https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
-	<dependency>
-	    <groupId>com.fasterxml.jackson.core</groupId>
-	    <artifactId>jackson-databind</artifactId>
-	    <version>${com.fasterxml.jackson.core.version}</version>
-	    <scope>compile</scope>
-	</dependency>
-    <dependency>
-        <groupId>com.fasterxml.jackson.datatype</groupId>
-        <artifactId>jackson-datatype-jsr310</artifactId>
-        <version>${com.fasterxml.jackson.core.version}</version>
-    </dependency>
-  </dependencies>
+	    <!-- Source: https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-databind</artifactId>
+		    <version>${com.fasterxml.jackson.core.version}</version>
+		    <scope>compile</scope>
+		</dependency>
+	    <dependency>
+	        <groupId>com.fasterxml.jackson.datatype</groupId>
+	        <artifactId>jackson-datatype-jsr310</artifactId>
+	        <version>${com.fasterxml.jackson.core.version}</version>
+	    </dependency>
+	</dependencies>
 	<build>
 		<finalName>javafx-app</finalName>
 		<plugins>
