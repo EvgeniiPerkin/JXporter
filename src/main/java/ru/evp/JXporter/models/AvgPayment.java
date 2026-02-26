@@ -28,6 +28,11 @@ public class AvgPayment {
 	 * Инициалы заемщика \ заемщиков
 	 */
 	private String initials;
+	
+	/**
+	 *  Код основания прекращения обязательства
+	 */
+	private String loanIndicator;
 
 	public String getSource() {
 		return source;
@@ -67,5 +72,13 @@ public class AvgPayment {
 
 	public void setInitials(String initials) {
 		this.initials = initials;
+	}
+
+	public String getLoanIndicator() {
+		return loanIndicator;
+	}
+
+	public void setLoanIndicator(String loanIndicator) {
+		this.loanIndicator = loanIndicator;
 	}
 }
