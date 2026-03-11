@@ -45,9 +45,9 @@ public class SspXmlParser {
 		    doc = parser.parse(is);
 		    
 		    Person result = new Person();
-		    result.setLastName(parser.getString(doc, "ОтветНаЗапросСведений/Сведения/ТитульнаяЧасть/ФИО/Фамилия"));
-		    result.setFirstName(parser.getString(doc, "ОтветНаЗапросСведений/Сведения/ТитульнаяЧасть/ФИО/Имя"));
-		    result.setPatronymic(parser.getString(doc, "ОтветНаЗапросСведений/Сведения/ТитульнаяЧасть/ФИО/Отчество"));
+		    result.setLastName(parser.getString(doc, "ОтветНаЗапросСведений/Сведения/ТитульнаяЧасть/ФИО/Фамилия").trim());
+		    result.setFirstName(parser.getString(doc, "ОтветНаЗапросСведений/Сведения/ТитульнаяЧасть/ФИО/Имя").trim());
+		    result.setPatronymic(parser.getString(doc, "ОтветНаЗапросСведений/Сведения/ТитульнаяЧасть/ФИО/Отчество").trim());
 		    result.setBirthDate(LocalDate.parse(parser.getString(doc, "ОтветНаЗапросСведений/Сведения/ТитульнаяЧасть/ДатаРождения")));
 		    
 		    logger.info("Успешное получение из файла xml ssp данных о клиенте: " + result.getInitials());
